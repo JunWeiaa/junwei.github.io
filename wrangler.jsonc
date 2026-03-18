@@ -1,17 +1,17 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "junwei-homepage",
-  "compatibility_date": "2026-03-18",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "_site"
-  },
-  "build": {
-    "command": "bundle exec jekyll build"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "junwei-homepage",
+    "compatibility_date": "2026-03-18",
+    "observability": {
+        "enabled": true
+    },
+    "assets": {
+        "directory": "_site"
+    },
+    "build": {
+        "command": "bundle exec jekyll build"
+    },
+    "compatibility_flags": [
+        "nodejs_compat"
+    ]
 }
