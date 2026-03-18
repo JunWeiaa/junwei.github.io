@@ -9,7 +9,7 @@
         "directory": "_site"
     },
     "build": {
-        "command": "bundle exec jekyll build"
+        "command": "LANG=C.UTF-8 LC_ALL=C.UTF-8 bundle exec jekyll build"
     },
     "compatibility_flags": [
         "nodejs_compat"
