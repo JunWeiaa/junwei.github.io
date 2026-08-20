@@ -3,56 +3,41 @@ permalink: /
 title: ""
 excerpt: ""
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am actively seeking Ph.D. opportunities in robotics, robot learning, and autonomous systems.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+I am an M.S. student in Electronic Information at Hunan University, advised by Prof. Zhiqiang Miao and Prof. Yaonan Wang. My research focuses on embodied robot learning, generative trajectory planning, legged and humanoid robots, sim-to-real transfer, and dynamics-aware learning for deployable robot behavior.
 
+I am especially interested in how learning-based planners and policies can use structure from dynamics, constraints, contacts, and real robot data to become reliable on high-dimensional embodied systems.
+
+<span class='anchor' id='news'></span>
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
-# 📝 Publications 
+- *Aug 2026:* One paper on SubCat, a vectored-thrust underwater robot with MPC, appears in IEEE Robotics and Automation Letters.
+- *May 2026:* One paper on fault-tolerant NMPC with safety guarantees for underwater vehicles appears in IEEE Robotics and Automation Letters.
+- *Oct 2025:* Our dual-mode passive fault-tolerant control work appears at IEEE/RSJ IROS 2025.
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<span class='anchor' id='publications'></span>
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+# 📝 Publications
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+1. **SubCat: Design and Control of a Vectored-Thrust Underwater Robot with Model Predictive Control**<br>
+   **Jun Wei**, Zhiqiang Miao, Yizong Chen, Xinjiang Liu, Yaonan Wang<br>
+   *IEEE Robotics and Automation Letters (RA-L), Aug 2026*
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
+2. **Fault-Tolerant NMPC with Safety Guarantees for Underwater Vehicles**<br>
+   **Jun Wei**, Zhiqiang Miao, Jinbao Zhang, Yizong Chen, Yaonan Wang<br>
+   *IEEE Robotics and Automation Letters (RA-L), May 2026*<br>
+   [Paper](https://ieeexplore.ieee.org/document/11520264)
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
-
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
-
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+3. **Dual-Mode Passive Fault-Tolerant Control for Underwater Vehicles with Actuator Faults and Time-Varying Disturbances**<br>
+   Yizong Chen*, **Jun Wei***, Zhiqiang Miao, Kangcheng Liu, Yaonan Wang<br>
+   *IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Oct 2025*<br>
+   *Equal contribution.* [Paper](https://ieeexplore.ieee.org/document/11247724)

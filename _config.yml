@@ -23,12 +23,12 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Jun Wei"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Jun Wei's academic homepage"
-  location         : "Beijing, China"
-  employer         :
+  bio              : "M.S. Student, Hunan University"
+  location         : "Changsha, Hunan, China"
+  employer         : "Hunan University"
   pubmed           : 
   googlescholar    : #"https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "Lorem@ipsum.com"
+  email            : "weijunn@hnu.edu.cn"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -37,7 +37,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : # e.g., "github username"
+  github           : "JunWeiaa" # e.g., "github username"
   google_plus      :
   keybase          :
   instagram        :
