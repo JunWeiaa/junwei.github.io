@@ -57,11 +57,12 @@ My current work explores generative planning from real robot data, with a focus 
 
 **Dual-Mode Passive Fault-Tolerant Control for Underwater Vehicles with Actuator Faults and Time-Varying Disturbances**
 
-Yizong Chen<sup>&#42;</sup>, **Jun Wei**<sup>&#42;</sup>, Zhiqiang Miao, Kangcheng Liu, Yaonan Wang
+Yizong Chen<sup>&#42;</sup>, **Jun Wei**<sup>&#42;</sup>, Zhiqiang Miao, Kangcheng Liu, Yaonan Wang<br>
+<sup>&#42;</sup> Equal contribution
 
 *IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Oct 2025*
 
-*Equal contribution.* [Paper](https://ieeexplore.ieee.org/document/11247724)
+[Paper](https://ieeexplore.ieee.org/document/11247724)
 </div>
 </div>
 
