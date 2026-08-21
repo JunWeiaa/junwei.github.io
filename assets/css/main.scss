@@ -60,6 +60,7 @@
             box-shadow: 3px 3px 6px #888;
             object-fit: cover;
         }
+
     }
     
     .paper-box-text{
@@ -106,4 +107,24 @@ h1:before, .anchor:before {
     color: white;
     background-color: #00369f;
     font-size: .8em;
+}
+
+.project-gif-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+    margin: .75rem 0 1.5rem;
+
+    img {
+        width: 100%;
+        aspect-ratio: 43 / 24;
+        object-fit: cover;
+        border: 1px solid #e6e6e6;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+    }
+
+    img.crop-from-bottom {
+        object-position: top;
+    }
 }
