@@ -28,7 +28,7 @@ My current work explores generative planning from real robot data, with a focus 
 
 # 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RA-L 2026</div><img src="{{ '/pub_vid/subcat_demo_2.gif' | relative_url }}" alt="SubCat underwater robot demonstration" width="100%" loading="lazy"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RA-L 2026</div><video width="100%" autoplay loop muted playsinline preload="metadata" aria-label="SubCat underwater robot demonstration"><source src="{{ '/pub_vid/subcat_demo_2.mp4' | relative_url }}" type="video/mp4"></video></div></div>
 <div class='paper-box-text' markdown="1">
 
 **SubCat: Design and Control of a Vectored-Thrust Underwater Robot with Model Predictive Control**
@@ -36,10 +36,12 @@ My current work explores generative planning from real robot data, with a focus 
 **Jun Wei**, Zhiqiang Miao, Yizong Chen, Xinjiang Liu, Yaonan Wang
 
 *IEEE Robotics and Automation Letters (RA-L), Aug 2026*
+
+[Paper](https://ieeexplore.ieee.org/document/11661758)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RA-L 2026</div><img src="{{ '/pub_vid/ftnmpc_demo_1.gif' | relative_url }}" alt="Fault-tolerant NMPC underwater vehicle demonstration" width="100%" loading="lazy"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RA-L 2026</div><video width="100%" autoplay loop muted playsinline preload="metadata" aria-label="Fault-tolerant NMPC underwater vehicle demonstration"><source src="{{ '/pub_vid/ftnmpc_demo_1.mp4' | relative_url }}" type="video/mp4"></video></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Fault-Tolerant NMPC with Safety Guarantees for Underwater Vehicles**
@@ -52,7 +54,7 @@ My current work explores generative planning from real robot data, with a focus 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IROS 2025</div><img src="{{ '/pub_vid/iros2025_demo.gif' | relative_url }}" alt="IROS 2025 underwater vehicle fault-tolerant control demonstration" width="100%" loading="lazy"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IROS 2025</div><video width="100%" autoplay loop muted playsinline preload="metadata" aria-label="IROS 2025 underwater vehicle fault-tolerant control demonstration"><source src="{{ '/pub_vid/iros2025_demo.mp4' | relative_url }}" type="video/mp4"></video></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Dual-Mode Passive Fault-Tolerant Control for Underwater Vehicles with Actuator Faults and Time-Varying Disturbances**
@@ -73,9 +75,9 @@ Yizong Chen<sup>&#42;</sup>, **Jun Wei**<sup>&#42;</sup>, Zhiqiang Miao, Kangche
 - [**underwater_ros2_control**](https://github.com/JunWeiaa/underwater_ros2_control): ROS 2 control stack for underwater robot experiments and real-world platform integration.
 
 <div class="project-gif-grid">
-<img src="{{ '/pub_vid/underwater_ros2_control_demo_1.gif' | relative_url }}" alt="underwater_ros2_control demonstration 1" width="100%" loading="lazy">
-<img src="{{ '/pub_vid/underwater_ros2_control_demo_2.gif' | relative_url }}" alt="underwater_ros2_control demonstration 2" width="100%" loading="lazy">
-<img class="crop-from-bottom" src="{{ '/pub_vid/underwater_ros2_control_demo_3.gif' | relative_url }}" alt="underwater_ros2_control demonstration 3" width="100%" loading="lazy">
+<video width="100%" autoplay loop muted playsinline preload="metadata" aria-label="underwater_ros2_control demonstration 1"><source src="{{ '/pub_vid/underwater_ros2_control_demo_1.mp4' | relative_url }}" type="video/mp4"></video>
+<video width="100%" autoplay loop muted playsinline preload="metadata" aria-label="underwater_ros2_control demonstration 2"><source src="{{ '/pub_vid/underwater_ros2_control_demo_2.mp4' | relative_url }}" type="video/mp4"></video>
+<video class="crop-from-bottom" width="100%" autoplay loop muted playsinline preload="metadata" aria-label="underwater_ros2_control demonstration 3"><source src="{{ '/pub_vid/underwater_ros2_control_demo_3.mp4' | relative_url }}" type="video/mp4"></video>
 </div>
 
 - [**tag_ekf_localization**](https://github.com/JunWeiaa/tag_ekf_localization): Tag-based EKF localization project for robot state estimation.

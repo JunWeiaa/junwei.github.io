@@ -55,8 +55,12 @@
         display: flex;
         width: 100%;
         order: 2;
-        img {
+        img,
+        video {
+            display: block;
+            width: 100%;
             max-width: 400px;
+            aspect-ratio: 16 / 9;
             box-shadow: 3px 3px 6px #888;
             object-fit: cover;
         }
@@ -115,7 +119,9 @@ h1:before, .anchor:before {
     gap: .75rem;
     margin: .75rem 0 1.5rem;
 
-    img {
+    img,
+    video {
+        display: block;
         width: 100%;
         aspect-ratio: 43 / 24;
         object-fit: cover;
@@ -124,7 +130,7 @@ h1:before, .anchor:before {
         box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
     }
 
-    img.crop-from-bottom {
+    .crop-from-bottom {
         object-position: top;
     }
 }
