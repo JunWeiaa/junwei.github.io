@@ -35,7 +35,7 @@ My current work explores generative planning from real robot-payload data, exten
 
 **Jun Wei**, Zhiqiang Miao, Yizong Chen, Xinjiang Liu, Yaonan Wang
 
-*IEEE Robotics and Automation Letters (RA-L), Aug 2026*
+*IEEE Robotics and Automation Letters (**RA-L**), Aug 2026*
 
 [Paper](https://ieeexplore.ieee.org/document/11661758)
 </div>
@@ -48,7 +48,7 @@ My current work explores generative planning from real robot-payload data, exten
 
 **Jun Wei**, Zhiqiang Miao, Jinbao Zhang, Yizong Chen, Yaonan Wang
 
-*IEEE Robotics and Automation Letters (RA-L), May 2026*
+*IEEE Robotics and Automation Letters (**RA-L**), May 2026*
 
 [Paper](https://ieeexplore.ieee.org/document/11520264)
 </div>
@@ -62,7 +62,7 @@ My current work explores generative planning from real robot-payload data, exten
 Yizong Chen<sup>&#42;</sup>, **Jun Wei**<sup>&#42;</sup>, Zhiqiang Miao, Kangcheng Liu, Yaonan Wang<br>
 <sup>&#42;</sup> Equal contribution
 
-*IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Oct 2025*
+*IEEE/RSJ International Conference on Intelligent Robots and Systems (**IROS 2025**), Oct 2025*
 
 [Paper](https://ieeexplore.ieee.org/document/11247724)
 </div>
