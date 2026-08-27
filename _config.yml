@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Jun Wei"
-description              : "Robot control and data-driven motion planning for real robotic systems"
+description              : "Robot Control / Motion Planning"
 repository               : "JunWeiaa/junwei.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,11 +23,11 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Jun Wei"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "M.S. Student, Hunan University"
-  location         : "Changsha, Hunan, China"
+  bio              :
+  location         :
   employer         : "Hunan University"
   pubmed           : 
-  googlescholar    : #"https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
+  googlescholar    : "https://scholar.google.com/citations?user=LMtmjrAAAAAJ"
   email            : "weijunn@hnu.edu.cn"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :

@@ -10,11 +10,11 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am actively seeking Ph.D. opportunities in robot control, data-driven motion planning, and generative motion planning for real robotic systems.
+I am actively seeking Ph.D. opportunities in data-driven motion planning and robot control for real robotic systems.
 
-I am an M.S. student in Electronic Information at Hunan University, advised by Prof. Zhiqiang Miao and Prof. Yaonan Wang. My research centers on robot control and data-driven motion planning for real robotic systems, especially how learned planners can incorporate dynamics, feedback, and constraints to generate motions that are feasible to execute.
+I am an M.S. student in Electronic Information at Hunan University, advised by [Prof. Zhiqiang Miao](https://eeit.hnu.edu.cn/info/1544/5187.htm) and [Prof. Yaonan Wang](https://robotics.hnu.edu.cn/info/1176/3098.htm). My research centers on data-driven motion planning and robot control for real robotic systems, especially how generative planners can incorporate dynamics, feedback, contact constraints, and physical limits to produce reliable motion.
 
-My current work explores generative planning from real robot data, with a focus on constraint-satisfying motion generation under physical limits and system uncertainty.
+My current work explores generative planning from real robot-payload data, extending my prior work in constrained underwater robot control toward motion generation under uncertainty.
 
 <span class='anchor' id='news'></span>
 
@@ -72,7 +72,7 @@ Yizong Chen<sup>&#42;</sup>, **Jun Wei**<sup>&#42;</sup>, Zhiqiang Miao, Kangche
 
 # 💻 Projects
 
-- [**underwater_ros2_control**](https://github.com/JunWeiaa/underwater_ros2_control): ROS 2 control stack for underwater robot experiments and real-world platform integration.
+- [**underwater_ros2_control**](https://github.com/JunWeiaa/underwater_ros2_control): ROS 2 control framework for sim-to-real underwater robot experiments and deployment.
 
 <div class="project-gif-grid">
 <video width="100%" autoplay loop muted playsinline preload="metadata" aria-label="underwater_ros2_control demonstration 1"><source src="{{ '/pub_vid/underwater_ros2_control_demo_1.mp4' | relative_url }}" type="video/mp4"></video>
@@ -80,4 +80,8 @@ Yizong Chen<sup>&#42;</sup>, **Jun Wei**<sup>&#42;</sup>, Zhiqiang Miao, Kangche
 <video class="crop-from-bottom" width="100%" autoplay loop muted playsinline preload="metadata" aria-label="underwater_ros2_control demonstration 3"><source src="{{ '/pub_vid/underwater_ros2_control_demo_3.mp4' | relative_url }}" type="video/mp4"></video>
 </div>
 
-- [**tag_ekf_localization**](https://github.com/JunWeiaa/tag_ekf_localization): Tag-based EKF localization project for robot state estimation.
+- [**tag_ekf_localization**](https://github.com/JunWeiaa/tag_ekf_localization): AprilTag-based EKF localization package for ROS robot state estimation.
+
+- [**subcat-hw**](https://github.com/JunWeiaa/subcat-hw.git): Hardware design repository for the SubCat vectored-thrust underwater robot.
+
+- [**BusLink**](https://github.com/JunWeiaa/BusLink): STM32-based multi-bus USB bridge for UART, CAN, SPI, I2C, and PWM.
