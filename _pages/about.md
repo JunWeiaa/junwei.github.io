@@ -21,6 +21,7 @@ My current work explores generative planning from real robot-payload data, exten
 # 🔥 News
 
 - *Aug 2026:* Our SubCat paper on model-predictive control for a compact vectored-thrust underwater robot appears in IEEE Robotics and Automation Letters.
+- *Jul 2026:* Our Koopman-MPC work for thrust-vectored underwater vehicle control appears in IEEE Robotics and Automation Letters.
 - *May 2026:* Our work on safety-guaranteed fault-tolerant NMPC for underwater vehicles appears in IEEE Robotics and Automation Letters.
 - *Oct 2025:* Our work on passive fault-tolerant control under actuator faults and disturbances appears at IEEE/RSJ IROS 2025.
 
@@ -38,6 +39,19 @@ My current work explores generative planning from real robot-payload data, exten
 *IEEE Robotics and Automation Letters (**RA-L**), Aug 2026*
 
 [Paper](https://ieeexplore.ieee.org/document/11661758)
+</div>
+</div>
+
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">RA-L 2026</div><img src="{{ '/pub_vid/koopman_mpc_cover_pdf_full.png' | relative_url }}" alt="Koopman-MPC framework diagram"></div></div>
+<div class="paper-box-text" markdown="1">
+
+**Weighted Online Koopman Learning for Model Predictive Control of Thrust-Vectored Underwater Vehicles**
+
+Yizong Chen, Zhiqiang Miao, **Jun Wei**, Yaonan Wang
+
+*IEEE Robotics and Automation Letters (**RA-L**), Jul 2026*
+
+[Paper](https://ieeexplore.ieee.org/document/11520253)
 </div>
 </div>
 
