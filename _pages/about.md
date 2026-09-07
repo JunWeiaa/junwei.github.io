@@ -10,11 +10,15 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
+<div class="about-intro" markdown="1">
+
 I am actively seeking Ph.D. opportunities in data-driven motion planning and robot control for real robotic systems.
 
 I am an M.S. student in Electronic Information at Hunan University, advised by [Prof. Zhiqiang Miao](https://eeit.hnu.edu.cn/info/1544/5187.htm) and [Prof. Yaonan Wang](https://robotics.hnu.edu.cn/info/1176/3098.htm). My research centers on data-driven motion planning and robot control for real robotic systems, especially how generative planners can incorporate dynamics, feedback, contact constraints, and physical limits to produce reliable motion.
 
-My current work explores generative planning from real robot-payload data, extending my prior work in constrained underwater robot control toward motion generation under uncertainty.
+My current work explores flow-matching-based planning from real robot-payload data in previously unseen, partially observed 3D environments.
+
+</div>
 
 <span class='anchor' id='news'></span>
 
