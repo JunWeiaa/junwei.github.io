@@ -20,6 +20,11 @@ My current work explores flow-matching-based planning from real robot-payload da
 
 </div>
 
+<div class="current-work-demo">
+<video autoplay loop muted playsinline preload="metadata" aria-label="Flow-matching planner navigating through an environment with 100 obstacles"><source src="{{ '/pub_vid/fm_100_obstacles.mp4' | relative_url }}" type="video/mp4"></video>
+<div class="current-work-caption">Flow-matching planner guiding a robot-payload system to the goal through a previously unseen environment with 100 obstacles.</div>
+</div>
+
 <span class='anchor' id='news'></span>
 
 # 🔥 News
