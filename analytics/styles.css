@@ -208,18 +208,6 @@ button:focus-visible {
   display: block;
 }
 
-.scene-tooltip .globe-tooltip {
-  padding: 8px 10px;
-  border: 1px solid rgba(85, 217, 255, 0.35);
-  background: #06111f;
-  color: var(--text);
-  font: 13px/1.5 ui-sans-serif, system-ui, sans-serif;
-}
-
-.scene-tooltip .globe-tooltip span {
-  color: var(--muted);
-}
-
 .globe-copy {
   position: absolute;
   top: 28px;
@@ -239,6 +227,50 @@ button:focus-visible {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.location-card {
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  z-index: 3;
+  width: min(270px, calc(100% - 40px));
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  background: rgba(3, 11, 21, 0.86);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(14px);
+  pointer-events: none;
+}
+
+.location-card[hidden] {
+  display: none;
+}
+
+.location-card strong,
+.location-card span,
+.location-card em {
+  display: block;
+}
+
+.location-card strong {
+  margin: 3px 0 4px;
+  font-size: 1rem;
+  font-weight: 620;
+}
+
+.location-card span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.location-card em {
+  margin-top: 9px;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
 }
 
 .stats {
@@ -553,6 +585,11 @@ button:focus-visible {
   .globe-copy {
     top: 22px;
     left: 18px;
+  }
+
+  .location-card {
+    top: 96px;
+    right: 14px;
   }
 
   .stats {

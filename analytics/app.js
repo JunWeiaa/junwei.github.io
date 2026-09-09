@@ -15,6 +15,10 @@
     cityCount: document.querySelector("#city-count"),
     countryCount: document.querySelector("#country-count"),
     cityList: document.querySelector("#city-list"),
+    locationCard: document.querySelector("#location-card"),
+    locationCity: document.querySelector("#location-city"),
+    locationRegion: document.querySelector("#location-region"),
+    locationVisits: document.querySelector("#location-visits"),
     rangeDescription: document.querySelector("#range-description"),
     updatedAt: document.querySelector("#updated-at"),
     refreshButton: document.querySelector("#refresh-button"),
@@ -47,7 +51,7 @@
 
     const globe = window.Globe()(elements.globe)
       .backgroundColor("rgba(0, 0, 0, 0)")
-      .globeImageUrl("https://unpkg.com/three-globe@2.45.2/example/img/earth-night.jpg")
+      .globeImageUrl("https://unpkg.com/three-globe@2.45.2/example/img/earth-blue-marble.jpg")
       .showAtmosphere(true)
       .atmosphereColor("#4fd4ff")
       .atmosphereAltitude(0.18)
@@ -58,13 +62,14 @@
       .pointAltitude(cityPointAltitude)
       .pointColor(cityPointColor)
       .pointResolution(10)
-      .pointLabel(cityPointLabel)
+      .pointLabel(() => "")
       .ringLat("latitude")
       .ringLng("longitude")
       .ringColor(() => (time) => `rgba(85, 217, 255, ${Math.max(0, 1 - time)})`)
       .ringMaxRadius((city) => 1.6 + Math.log10(city.visits + 1) * 1.7)
       .ringPropagationSpeed(0.85)
       .ringRepeatPeriod((city) => Math.max(950, 2300 - Math.log10(city.visits + 1) * 420))
+      .onPointHover(showLocation)
       .onPointClick(focusCity);
 
     const controls = globe.controls();
@@ -126,16 +131,20 @@
     return "#3a86ff";
   }
 
-  function cityPointLabel(city) {
+  function showLocation(city) {
+    if (!city) {
+      elements.locationCard.hidden = true;
+      return;
+    }
+
     const location = city.region && city.region !== "Unknown"
-      ? `${city.region}, ${city.country}`
+      ? `${city.region} · ${city.country}`
       : city.country;
 
-    return `
-      <div class="globe-tooltip">
-        <strong>${escapeHtml(city.city)}</strong><br>
-        <span>${escapeHtml(location)} · ${numberFormatter.format(city.visits)} 次浏览</span>
-      </div>`;
+    elements.locationCity.textContent = city.city;
+    elements.locationRegion.textContent = location;
+    elements.locationVisits.textContent = `${numberFormatter.format(city.visits)} 次浏览`;
+    elements.locationCard.hidden = false;
   }
 
   function focusCity(city) {
