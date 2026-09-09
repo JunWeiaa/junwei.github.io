@@ -67,6 +67,8 @@ include:
 exclude:
   - docs
   - google_scholar_crawler
+  - worker
+  - wrangler.jsonc
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache

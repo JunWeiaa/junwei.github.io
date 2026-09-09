@@ -1,0 +1,9 @@
+{% if page.analytics != false %}
+<script>
+  fetch("{{ '/api/visit' | relative_url }}", {
+    method: "POST",
+    credentials: "same-origin",
+    keepalive: true
+  }).catch(function () {});
+</script>
+{% endif %}

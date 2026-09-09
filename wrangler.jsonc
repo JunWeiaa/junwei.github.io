@@ -2,11 +2,21 @@
     "$schema": "node_modules/wrangler/config-schema.json",
     "name": "junwei-homepage",
     "compatibility_date": "2026-03-18",
+    "main": "worker/index.mjs",
     "observability": {
-        "enabled": true
+        "enabled": true,
+        "logs": {
+            "enabled": true,
+            "head_sampling_rate": 1,
+            "invocation_logs": false
+        }
     },
     "assets": {
-        "directory": "_site"
+        "directory": "_site",
+        "binding": "ASSETS",
+        "run_worker_first": [
+            "/api/visit"
+        ]
     },
     "build": {
         "command": "LANG=C.UTF-8 LC_ALL=C.UTF-8 bundle exec jekyll build"
