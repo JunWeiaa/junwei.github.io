@@ -16,13 +16,22 @@ I am actively seeking Ph.D. opportunities in data-driven motion planning and rob
 
 I am an M.S. student in Electronic Information at the School of Artificial Intelligence and Robotics, Hunan University, advised by [Prof. Zhiqiang Miao](https://eeit.hnu.edu.cn/info/1544/5187.htm) and [Prof. Yaonan Wang](https://robotics.hnu.edu.cn/info/1176/3098.htm). My research centers on data-driven motion planning and robot control for real robotic systems, especially how generative planners can incorporate dynamics, feedback, contact constraints, and physical limits to produce reliable motion.
 
-My current work explores flow-matching-based planning from real robot-payload data in previously unseen, partially observed 3D environments.
-
 </div>
 
 <div class="current-work-demo">
+<div class="current-work-overview">
+<span class="current-work-label">Current Research</span>
+<div class="current-work-title">Generative Flow-Matching Planning for Robot-Payload Systems</div>
+<p>A <strong>B-spline flow-matching planner</strong> trained on real robot-payload trajectories, paired with <strong>online mapping and geodesic guidance</strong> to adapt generated motion as a partially observed 3D environment is revealed. The broader aim is to connect learned motion generation with system dynamics, feedback, safety constraints, and payload geometry for reliable deployment.</p>
+<div class="current-work-tags" aria-label="Current research methods">
+<span>Real Robot-Payload Data</span>
+<span>B-Spline Flow Matching</span>
+<span>Online 3D Mapping</span>
+<span>Constraint-Aware Guidance</span>
+</div>
+</div>
 <video autoplay loop muted playsinline preload="metadata" aria-label="Flow-matching planner navigating through an environment with 100 obstacles"><source src="{{ '/pub_vid/fm_100_obstacles.mp4' | relative_url }}" type="video/mp4"></video>
-<div class="current-work-caption">Flow-matching planner guiding a robot-payload system to the goal through a previously unseen environment with 100 obstacles.</div>
+<div class="current-work-caption">Evaluation covers U-shaped and vertical passages, payload-constrained corridors, occlusions requiring exploration, newly observed obstacles, and depth-sensor dropout.</div>
 </div>
 
 <span class='anchor' id='news'></span>

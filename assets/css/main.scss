@@ -47,6 +47,53 @@
 .current-work-demo {
     margin: .75rem 0 1.75rem;
 
+    .current-work-overview {
+        margin-bottom: .8rem;
+        padding: .9rem 1rem;
+        border-left: 3px solid #00369f;
+        background: #f7f9fc;
+    }
+
+    .current-work-label {
+        display: block;
+        margin-bottom: .18rem;
+        color: #57708d;
+        font-size: .73em;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+    }
+
+    .current-work-title {
+        color: #003f73;
+        font-size: 1.08em;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .current-work-overview p {
+        margin: .42rem 0 .68rem;
+        font-size: .96em;
+        line-height: 1.55;
+    }
+
+    .current-work-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .35rem;
+
+        span {
+            padding: .2rem .5rem;
+            border: 1px solid #c9d6e5;
+            border-radius: 999px;
+            color: #294d70;
+            background: #fff;
+            font-size: .76em;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+    }
+
     video {
         display: block;
         width: 100%;
