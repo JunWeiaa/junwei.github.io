@@ -99,7 +99,7 @@ async function handleAnalytics(request, env, url) {
   headers.set("x-robots-tag", "noindex, nofollow");
   headers.set(
     "content-security-policy",
-    "default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'",
+    "default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self'; img-src 'self' data: https://unpkg.com; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'",
   );
 
   return new Response(assetResponse.body, {

@@ -33,10 +33,11 @@
     paragraph.textContent = text;
     elements.message.classList.add("is-visible");
     elements.message.classList.toggle("is-error", type === "error");
+    elements.message.classList.toggle("is-empty", type === "empty");
   }
 
   function hideMessage() {
-    elements.message.classList.remove("is-visible", "is-error");
+    elements.message.classList.remove("is-visible", "is-error", "is-empty");
   }
 
   function initializeGlobe() {
@@ -46,6 +47,7 @@
 
     const globe = window.Globe()(elements.globe)
       .backgroundColor("rgba(0, 0, 0, 0)")
+      .globeImageUrl("https://unpkg.com/three-globe@2.45.2/example/img/earth-night.jpg")
       .showAtmosphere(true)
       .atmosphereColor("#4fd4ff")
       .atmosphereAltitude(0.18)
@@ -75,10 +77,10 @@
 
     try {
       const material = globe.globeMaterial();
-      material.color.set("#061426");
+      material.color.set("#ffffff");
       material.emissive.set("#03101d");
-      material.emissiveIntensity = 0.32;
-      material.shininess = 0.7;
+      material.emissiveIntensity = 0.16;
+      material.shininess = 0.45;
     } catch {
       // The globe still renders correctly if a future library version changes its material API.
     }
