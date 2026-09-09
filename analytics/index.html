@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="color-scheme" content="dark">
+    <title>Visitor Globe · Private Analytics</title>
+    <link rel="stylesheet" href="/analytics/styles.css">
+    <script src="https://unpkg.com/globe.gl@2.46.2/dist/globe.gl.min.js" defer></script>
+    <script src="/analytics/app.js" defer></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow">PRIVATE ANALYTICS</p>
+            <h1>Visitor Globe</h1>
+          </div>
+        </div>
+
+        <div class="toolbar" aria-label="统计控制">
+          <div class="range-control" role="group" aria-label="统计时间范围">
+            <button type="button" data-days="1">24 小时</button>
+            <button type="button" data-days="7" class="is-active" aria-pressed="true">7 天</button>
+            <button type="button" data-days="30">30 天</button>
+            <button type="button" data-days="90">90 天</button>
+          </div>
+          <button type="button" class="rotation-control" id="rotation-control" aria-pressed="false">
+            暂停旋转
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="globe-shell" aria-label="全球城市访问分布">
+          <div class="grid-glow" aria-hidden="true"></div>
+          <div id="globe" aria-hidden="true"></div>
+
+          <div class="globe-copy">
+            <p class="eyebrow">GLOBAL TRAFFIC</p>
+            <h2>城市访问分布</h2>
+            <p id="range-description">最近 7 天的页面浏览</p>
+          </div>
+
+          <div class="stats" aria-live="polite">
+            <article class="stat-card">
+              <span>页面浏览</span>
+              <strong id="total-visits">—</strong>
+            </article>
+            <article class="stat-card">
+              <span>城市</span>
+              <strong id="city-count">—</strong>
+            </article>
+            <article class="stat-card">
+              <span>国家 / 地区</span>
+              <strong id="country-count">—</strong>
+            </article>
+          </div>
+
+          <div class="legend" aria-hidden="true">
+            <span>访问量</span>
+            <i class="legend-dot legend-dot-low"></i>
+            <span>少</span>
+            <i class="legend-line"></i>
+            <span>多</span>
+            <i class="legend-dot legend-dot-high"></i>
+          </div>
+
+          <div class="message is-visible" id="message" role="status">
+            <span class="loader" aria-hidden="true"></span>
+            <p>正在读取城市访问数据…</p>
+          </div>
+        </section>
+
+        <aside class="city-panel" aria-labelledby="city-ranking-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">TOP LOCATIONS</p>
+              <h2 id="city-ranking-title">热门城市</h2>
+            </div>
+            <span class="live-badge"><i></i> LIVE</span>
+          </div>
+
+          <ol class="city-list" id="city-list" aria-live="polite"></ol>
+
+          <footer class="panel-footer">
+            <span id="updated-at">尚未更新</span>
+            <button type="button" id="refresh-button">刷新数据</button>
+          </footer>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
