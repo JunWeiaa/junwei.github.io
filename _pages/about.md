@@ -12,9 +12,11 @@ redirect_from:
 
 <div class="about-intro" markdown="1">
 
+Hi, I’m Jun Wei. I am currently an M.S. student in Electronic Information at the School of Artificial Intelligence and Robotics, Hunan University, advised by [Prof. Zhiqiang Miao](https://eeit.hnu.edu.cn/info/1544/5187.htm) and [Prof. Yaonan Wang](https://robotics.hnu.edu.cn/info/1176/3098.htm).
+
 I am actively seeking Ph.D. opportunities in robot motion planning and control for real-world systems.
 
-I am an M.S. student in Electronic Information at the School of Artificial Intelligence and Robotics, Hunan University, advised by [Prof. Zhiqiang Miao](https://eeit.hnu.edu.cn/info/1544/5187.htm) and [Prof. Yaonan Wang](https://robotics.hnu.edu.cn/info/1176/3098.htm). My research spans both model-based and learning-based approaches to robot motion planning and control, with an emphasis on system dynamics, feedback, safety constraints, and physical limits. My current work develops a flow-matching-based motion planner from real robot-payload data for partially observed 3D environments.
+My research spans both model-based and learning-based approaches to robot motion planning and control, with an emphasis on system dynamics, feedback, safety constraints, and physical limits. My current work develops a flow-matching-based motion planner from real robot-payload data for partially observed 3D environments.
 
 </div>
 
