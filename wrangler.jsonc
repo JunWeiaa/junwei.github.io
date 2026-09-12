@@ -25,6 +25,7 @@
     "compatibility_flags": [
         "nodejs_compat"
     ],
+    // Set VISITOR_HASH_SALT separately with `wrangler secret put`; never commit it.
     "vars": {
         "ACCOUNT_ID": "2cbb8090b52df4bda14c21d9ae74b8cb",
         "ACCESS_TEAM_DOMAIN": "junn-wei-hz.cloudflareaccess.com",

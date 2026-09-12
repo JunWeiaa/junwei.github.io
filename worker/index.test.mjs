@@ -17,6 +17,7 @@ function createEnvironment(overrides = {}) {
     API_TOKEN: "test-token",
     ACCESS_TEAM_DOMAIN,
     ACCESS_AUD,
+    VISITOR_HASH_SALT: "test-visitor-hash-salt",
     ASSETS: {
       fetch: async () => new Response("asset", { status: 200 }),
     },
@@ -42,7 +43,7 @@ async function createAccessFixture() {
     true,
     ["sign", "verify"],
   );
-  const keyId = "test-key";
+  const keyId = `test-key-${crypto.randomUUID()}`;
   const publicJwk = await crypto.subtle.exportKey("jwk", keyPair.publicKey);
   publicJwk.kid = keyId;
   publicJwk.alg = "RS256";
@@ -83,9 +84,11 @@ test("records visits and protects the private analytics routes", async () => {
   const visitRequest = new Request("https://example.com/api/visit", {
     method: "POST",
     headers: {
+      "cf-connecting-ip": "203.0.113.42",
       origin: "https://example.com",
       referer: "https://example.com/research/",
       "sec-fetch-site": "same-origin",
+      "user-agent": "Mozilla/5.0 Test Browser",
     },
   });
   Object.defineProperty(visitRequest, "cf", {
@@ -95,14 +98,29 @@ test("records visits and protects the private analytics routes", async () => {
       latitude: "31.2304",
       longitude: "121.4737",
       region: "Shanghai",
+      asn: 4134,
+      asOrganization: "China Telecom",
     },
   });
 
   const visitResponse = await worker.fetch(visitRequest, environment);
   assert.equal(visitResponse.status, 204);
-  assert.deepEqual(writtenPoint.blobs, ["Shanghai", "Shanghai", "CN", "/research/"]);
+  assert.deepEqual(writtenPoint.blobs.slice(0, 5), [
+    "Shanghai",
+    "Shanghai",
+    "CN",
+    "/research/",
+    "203.0.113.xxx",
+  ]);
+  assert.match(writtenPoint.blobs[5], /^v-[a-f0-9]{20}$/);
+  assert.deepEqual(writtenPoint.blobs.slice(6), [
+    "AS4134",
+    "China Telecom",
+    "家庭/运营商",
+    "未发现异常",
+  ]);
   assert.deepEqual(writtenPoint.doubles, [31.2304, 121.4737]);
-  assert.equal(writtenPoint.indexes.length, 1);
+  assert.deepEqual(writtenPoint.indexes, [writtenPoint.blobs[5]]);
 
   const privateResponse = await worker.fetch(
     new Request("https://example.com/analytics/data"),
@@ -113,7 +131,7 @@ test("records visits and protects the private analytics routes", async () => {
 
 test("validates Access JWTs and returns normalized city data", async () => {
   const fixture = await createAccessFixture();
-  let submittedQuery = "";
+  const submittedQueries = [];
   const originalFetch = globalThis.fetch;
 
   globalThis.fetch = async (input, init = {}) => {
@@ -124,7 +142,25 @@ test("validates Access JWTs and returns normalized city data", async () => {
     }
 
     if (url.includes("/analytics_engine/sql")) {
-      submittedQuery = init.body;
+      submittedQueries.push(init.body);
+
+      if (init.body.includes("blob6 AS visitor_id")) {
+        return Response.json({
+          data: [
+            {
+              masked_ip: "203.0.113.xxx",
+              visitor_id: "v-0123456789abcdef0123",
+              asn: "AS4134",
+              organization: "China Telecom",
+              network_type: "家庭/运营商",
+              bot_status: "未发现异常",
+              visits: 3,
+              last_seen: "2026-09-12 03:30:00.000",
+            },
+          ],
+        });
+      }
+
       return Response.json({
         data: [
           {
@@ -155,8 +191,22 @@ test("validates Access JWTs and returns normalized city data", async () => {
     assert.equal(body.rangeDays, 30);
     assert.equal(body.cities[0].city, "Shanghai");
     assert.equal(body.cities[0].visits, 12);
-    assert.match(submittedQuery, /INTERVAL '30' DAY/);
-    assert.match(submittedQuery, /SUM\(_sample_interval\) AS visits/);
+    assert.match(submittedQueries[0], /INTERVAL '30' DAY/);
+    assert.match(submittedQueries[0], /SUM\(_sample_interval\) AS visits/);
+
+    const cityResponse = await worker.fetch(
+      new Request("https://example.com/analytics/city?days=7&city=Xi%27an&region=Shaanxi&country=CN", {
+        headers: { "cf-access-jwt-assertion": fixture.token },
+      }),
+      createEnvironment(),
+    );
+    const cityBody = await cityResponse.json();
+
+    assert.equal(cityResponse.status, 200);
+    assert.equal(cityBody.visitors[0].maskedIp, "203.0.113.xxx");
+    assert.equal(cityBody.visitors[0].networkType, "家庭/运营商");
+    assert.match(submittedQueries[1], /blob1 = 'Xi''an'/);
+    assert.match(submittedQueries[1], /AND blob6 != ''/);
   } finally {
     globalThis.fetch = originalFetch;
   }
